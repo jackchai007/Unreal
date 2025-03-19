@@ -21,11 +21,10 @@ namespace symbolic_access
 #endif
 }
 
-
-#define outToFile(format, ...) \
-	symbolic_access::LogPrint(LOG_TYPE_DEBUG," [%s:%d] " format , __func__, __LINE__, __VA_ARGS__)
-
+#undef DEBUG
 #ifdef DEBUG
+
+//VT host里不能使用Windows的DbgPrint
 
 #define LogError(format, ...) \
     symbolic_access::LogPrint(LOG_TYPE_ERROR," [%s:%d] " format , __func__, __LINE__, __VA_ARGS__)
