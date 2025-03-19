@@ -31,3 +31,4 @@
 *.out
 *.app
 /D-encryptiondll/.vs
+/VT_Driver/x64
